@@ -11,15 +11,21 @@ If you want to create a robust and scalable architecture in the cloud, the Fanou
 Amazon SNS (Simple Notification Service): Imagine that you have an e-commerce system that needs to notify several services when a new order is placed. Using SNS, you can create a notification thread for new orders and publish a message whenever an order is placed (Pub/Sub).
 
 Amazon SQS (Simple Queue Service): Suppose you have three services that need to process the request independently:
+
 •	Inventory Service: Updates stock.
+
 •	Billing Service: Generates an invoice for the order.
+
 •	Customer Notification Service: Sends a confirmation email to the customer.
 
 To guarantee the exact order of processing and avoid duplication of messages, you can use FIFO (First-In, First-Out) queues. These queues ensure that orders are processed in the exact order they were received, which is crucial for services like invoicing and inventory. Each service would have an SQS FIFO queue subscribed to the new request SNS topic, and messages will be processed sequentially.
 
 AWS Lambda: To process messages in SQS queues, you can use Lambda functions. Each Lambda function is configured to be triggered by a specific SQS FIFO queue:
+
 •	Inventory Lambda: Updates product stock.
+
 •	Billing Lambda: Creates and stores the order invoice.
+
 •	Notification Lambda: Sends a confirmation email to the customer.
 
 Example:
