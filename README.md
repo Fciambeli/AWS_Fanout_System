@@ -48,3 +48,6 @@ Advantages 🚀:
 •	Order Guaranteed with FIFO: The FIFO queue ensures that messages are processed in the correct order, which is crucial for operations that depend on the sequence of events.✔
 
 •	Resilience: Even if one service fails, the others continue to process messages, increasing the robustness of the system.✔
+
+<div style="display: inline_block"><br>
+<img align="center" alt="Fabio-Aw" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"">
