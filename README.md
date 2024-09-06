@@ -8,6 +8,10 @@
 
 If you want to create a robust and scalable architecture in the cloud, the Fanout design pattern using AWS SNS, SQS (FIFO) and Lambda is an excellent choice. Here I will show how these services can be used together to solve real problems efficiently! 📈
 
+Whats is Fanout⁉️
+
+Fanout refers to a message distribution pattern in which a single message is replicated and sent to multiple destinations. ☺️
+
 Amazon SNS (Simple Notification Service): Imagine that you have an e-commerce system that needs to notify several services when a new order is placed. Using SNS, you can create a notification thread for new orders and publish a message whenever an order is placed (Pub/Sub).
 
 Amazon SQS (Simple Queue Service): Suppose you have three services that need to process the request independently:
